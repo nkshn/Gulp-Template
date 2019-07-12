@@ -7,10 +7,10 @@ var gulp        = require('gulp'),
 
 // Static server
 gulp.task('server', function() {
-    browserSync.init({
-        server: './build'
-    });
-    //browserSync.watch('build/**/*.*').on('change', browserSync.reload);
+	browserSync.init({
+		server: './build'
+	});
+	//browserSync.watch('build/**/*.*').on('change', browserSync.reload);
 });
 
 // Gulp Pug
