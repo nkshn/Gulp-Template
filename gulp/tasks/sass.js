@@ -4,6 +4,7 @@ module.exports = function() {
 			.pipe($.gp.sourcemaps.init())
 			.pipe($.gp.sass({}))
 			.pipe($.gp.csso())
+			.pipe($.gp.plumber())
 			.pipe($.gp.autoprefixer({
 				overrideBrowserslist: ['last 3 versions']
 			}))

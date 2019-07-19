@@ -12,12 +12,12 @@ global.$ = {
 };
 
 // Визиваєм всі такски
-$.path.tasks.forEach(function (taskPath) {
+$.path.tasks.forEach(function(taskPath) {
 	require(taskPath)();
 });
 
 // Gulp Default
 $.gulp.task('default', $.gulp.series(
-	$.gulp.parallel('pug', 'sass'),
+	$.gulp.parallel('pug', 'sass', 'scripts:lib', 'scripts', 'image'),
 	$.gulp.parallel('watch', 'server')
 ));

@@ -4,6 +4,7 @@ module.exports = function() {
 			.pipe($.gp.pug({
 				pretty:true
 			}))
+			.pipe($.gp.plumber())
 			.pipe($.gulp.dest('build'))
 			.on('end', $.browserSync.reload);
 	});
